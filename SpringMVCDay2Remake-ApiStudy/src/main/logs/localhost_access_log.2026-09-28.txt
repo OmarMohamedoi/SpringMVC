@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [28/Sep/2026:03:51:28 +0300] "GET /SpringMVCDay2Remake-ApiStudy HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Sep/2026:03:51:30 +0300] "GET /SpringMVCDay2Remake-ApiStudy/ HTTP/1.1" 200 865
+0:0:0:0:0:0:0:1 - - [28/Sep/2026:03:51:30 +0300] "GET /favicon.ico HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [28/Sep/2026:03:51:34 +0300] "GET /SpringMVCDay2Remake-ApiStudy/tasks HTTP/1.1" 200 847
+0:0:0:0:0:0:0:1 - - [28/Sep/2026:03:51:36 +0300] "GET /SpringMVCDay2Remake-ApiStudy/tasks/1 HTTP/1.1" 200 290
+0:0:0:0:0:0:0:1 - - [28/Sep/2026:03:51:40 +0300] "GET /SpringMVCDay2Remake-ApiStudy/tasks/search?priority=HIGH HTTP/1.1" 200 476
+0:0:0:0:0:0:0:1 - - [28/Sep/2026:03:54:02 +0300] "GET /SpringMVCDay2Remake-ApiStudy HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Sep/2026:03:54:04 +0300] "GET /SpringMVCDay2Remake-ApiStudy/ HTTP/1.1" 200 865
