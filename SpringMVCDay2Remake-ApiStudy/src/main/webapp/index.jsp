@@ -22,5 +22,7 @@
         <li><a href="tasks">/tasks</a> -- both Filter and Interceptor fire</li>
         <li><a href="nope">/nope</a> -- only the Filter fires (no handler matched)</li>
     </ul>
+
+    <a href="${pageContext.request.contextPath}/tasks/new">➕ Create New Task</a>
 </body>
 </html>

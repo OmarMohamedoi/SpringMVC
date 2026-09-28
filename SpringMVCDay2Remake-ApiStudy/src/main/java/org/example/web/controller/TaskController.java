@@ -5,10 +5,7 @@ import org.example.domain.TaskRepository;
 import org.example.web.exception.TaskNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -29,6 +26,23 @@ public class TaskController {
         return "tasks";
     }
 
+    @GetMapping("/new")
+    public String createTask(Model model){
+        return "create-task";
+    }
+
+    @PostMapping("/new")
+    public String createTask(@RequestParam("title") String title,
+                             @RequestParam("priority") String priority,
+                             @RequestParam(value = "completed", defaultValue = "false") boolean completed, Model model){
+
+
+        Task newTask = new Task(null,title,priority,completed);
+        taskRepository.save(newTask);
+
+        model.addAttribute("task", newTask);
+        return "task-success";
+    }
     @GetMapping("/{id}")
     public String taskWithID(@PathVariable Long id, Model model){
         Task task =taskRepository.findById(id).orElseThrow(()->new TaskNotFoundException(id));
